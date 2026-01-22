@@ -4,6 +4,7 @@ import { DatabaseModule } from './common/database/database.module';
 import { HealthModule } from './modules/health/health.module';
 import { NotificationModule } from './modules/notification/notification.module';
 import { AuthModule } from './modules/auth/auth.module';
+import { PolicyModule } from './modules/policy/policy.module';
 import { AppController } from './app.controller';
 import { AppService } from './app.service';
 import { UsersModule } from './modules/users/users.module';
@@ -14,6 +15,7 @@ import { ThrottlerModule } from '@nestjs/throttler';
   imports: [ConfigModule, DatabaseModule, HealthModule, NotificationModule],
   imports: [ConfigModule, HealthModule, AuthModule],
 
+  imports: [ConfigModule, HealthModule, PolicyModule],
   imports: [
     ConfigModule,
     HealthModule,
